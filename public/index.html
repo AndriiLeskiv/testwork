@@ -1,10 +1,196 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Testwork</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <style>
+    .center{
+        position: absolute;
+        top: 80%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #registration{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn_trans {
+        transform: rotate(25grad);
+    }
+    .popup{
+        /*width: 350px;*/
+        /*height: 280px;*/
+        padding: 30px 20px;
+        background: #f5f5f5;
+        z-index: 5;
+        text-align: center;
+    }
+
+    .modal_show{
+        display: none;
+    }
+
+    .form-control-lg{
+        height: 60px;
+        width: 360px;
+        left: 7977px;
+        top: 5560px;
+        border-radius: 4px;
+    }
+</style>
 </head>
 <body>
-    <h1>Hello wold!!</h1>
+
+<nav class="navbar navbar-inverse navbar-fixed-top container-fluid ">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <a class="navbar-brand" href="#">
+                <img src="../img/logo.jpg" alt="logo">
+            </a>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Scholarships<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Scholarships 1-1</a></li>
+                        <li><a href="#">Scholarships 1-2</a></li>
+                        <li><a href="#">Scholarships 1-3</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Free Guides<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Free Guides 1-1</a></li>
+                        <li><a href="#">Free Guides 1-2</a></li>
+                        <li><a href="#">Free Guides 1-3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#"><i class="glyphicon glyphicon-search"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin-top: 55px">
+    Open modal
+</button>
+<div class="popup center modal_show">
+    <div class="text-center">
+        <h2>You must be a user to view this content...</h2>
+        <h3>Already have an account?  <a href="#">Log in here</a></h3>
+    </div>
+    <div class=" font-weight-bold">
+        I AM A:
+    </div>
+    <form  action="/" id="registration">
+        <div class="profession">
+            <label class="radio-inline"><input type="radio" name="profession" class="form-contorl"/>Student</label>
+            <label class="radio-inline"><input type="radio" name="profession" class="form-contorl"/>Parent</label>
+            <label class="radio-inline"><input type="radio" name="profession" class="form-contorl"/>Counselor</label>
+            <label class="radio-inline"><input type="radio" name="profession" class="form-contorl"/>Other</label>
+        </div>
+        <input type = "text" class="form-control form-control-lg" name = "firstname" placeholder = "First Name"/>
+        <br/>
+        <input type = "text" class="form-control form-control-lg" name = "lastname" placeholder = "Last Name"/>
+        <br/>
+        <input type = "text" class = "form-control form-control-lg" name = "email" placeholder = "Email Address"/>
+        <br/>
+        <input type = "password" class = "form-control form-control-lg" name = "password" placeholder = "Password" id = "password"/>
+        <br/>
+        <input type = "password" class = "form-control form-control-lg" name = "confirm" placeholder = "Confirm Password"/>
+        <br/>
+        <select class = "form-control form-control-lg" name = "school">
+            <option value="0" selected="" disabled="">School</option>
+            <option>High School </option>
+            <option>High School </option>
+            <option>High School </option>
+            <option>High School </option>
+        </select>
+        <br/>
+        <select class = "form-control form-control-lg" name="currentgrade">
+            <option value="0" selected="" disabled="">Current Grade/Year in School</option>
+            <option>High School Freshman</option>
+            <option>High School Freshman</option>
+            <option>High School Freshman</option>
+            <option>High School Freshman</option>
+        </select>
+        <br/>
+        <input type="text" id="datepicker" class="form-control form-control-lg" placeholder="Date">
+        <br/>
+        <div>
+            SUBSCRIBE:
+        </div>
+
+        <div class = "hobbies">
+            <label class="checkbox-inline"><input type="checkbox" name = "hobbies">
+
+                <div>
+                    <label class="checkbox-inline"><input type="checkbox" name = "hobbies">
+                    <h3>Scholarship Plus</h3>
+                    <span>A weekly newsletter with scholarship updates and news.</span>
+                </div></label>
+            <label class="checkbox-inline"><input type="checkbox" name = "hobbies">Football</label>
+            <label class="checkbox-inline"><input type="checkbox" name = "hobbies">Hockey</label>
+            <label class="checkbox-inline"><input type="checkbox" name = "hobbies">Tennis</label>
+        </div>
+        HOW DID YOU HEAR ABOUT US:
+        <br/>
+        <select class = "form-control form-control-lg" name = "country">
+            <option value="0" selected="" disabled="">Online search</option>
+            <option>Online search</option>
+            <option>Online search</option>
+            <option>Online search</option>
+            <option>Online search</option>
+        </select>
+        <br/>
+        <span>By clicking "Join," I agree to the <a href="#">Terms & Conditions</a></span>
+        <br/>
+        <button type="submit" class="btn btn-danger form-control-lg px-5 btn_send">Join</button>
+    </form>
+</div>
+
+<script>
+    $( document ).ready(function() {
+        $('.btn').on('click', function () {
+            $('.modal_show').css('display', 'block');
+            console.log('ok');
+        });
+        $( function() {
+            $( "#datepicker" ).datepicker();
+        } );
+
+        $('.btn_send').hover(
+            function () {
+                $(this).addClass('btn_trans');
+            },
+            function () {
+                $(this).removeClass('btn_trans');
+            }
+        );
+
+    });
+
+</script>
+
 </body>
 </html>
