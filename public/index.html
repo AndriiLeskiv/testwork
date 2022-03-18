@@ -9,214 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="/resources/demos/style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js
-"></script>
-
-    <script type="text/javascript" src="/js/register.js"></script>
-
-    <style>
-        h1,h2,h3,h4,h5,h6,p{
-            margin: 0;
-        }
-        body{
-            font-family: 'Work Sans', sans-serif;
-            color: #000000;
-        }
-        .container{
-            max-width: 850px;
-            margin: 0 auto;
-        }
-        .count{
-            padding: 25px 40px;
-        }
-        .item-box{
-            width: 100%;
-        }
-        .item{
-            display: flex;
-            padding: 40px 0;
-            cursor: pointer;
-            margin: 0 40px;
-            border-bottom: 1px solid #0000001A;
-            transition: 0.3s;
-        }
-        .item:last-child{
-            border: none;
-        }
-        .img-box{
-            display: flex;
-            align-items: center;
-            text-align: center;
-            width: 100%;
-            height: 100px;
-            max-width: 100px;
-            border: 1px solid #C4C4C4;
-            justify-content: center;
-        }
-        .img-box p{
-            color: #606060;
-        }
-        .text{
-            padding: 0 20px;
-            width: 100%;
-        }
-        .text h4{
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 21px;
-            margin-bottom: 5px;
-            transition: 0.3s;
-        }
-        .text h5{
-            font-weight: 300;
-            font-size: 16px;
-            line-height: 19px;
-            margin-bottom: 11px;
-        }
-        .text p{
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 19px;
-            margin-bottom: 6px;
-        }
-        .text p span{
-            color: #606060;
-        }
-        .save-box{
-            display: flex;
-            align-items: center;
-            width: auto;
-        }
-        .save-box div{
-            display: flex;
-            padding: 12px;
-            background-color: #F3F3F3;
-            transition: 0.3s;
-        }
-        .save-box div:hover{
-            transform: scale(1.1);
-        }
-        .save-box div img{
-            width: 12px;
-            height: 12px;
-            margin: auto;
-        }
-        .save-box div p{
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 16px;
-            color: #606060;
-            padding-left: 8px;
-        }
-        .bottom-text{
-            display: flex;
-        }
-        .bottom-text a{
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 21px;
-            text-decoration-line: underline;
-            color: #EF454E;
-            text-align: center;
-            padding-top: 50px;
-            margin: 0 auto;
-        }
-        .navbar {
-            background-color: #FFBF43;
-        }
-        .navbar .container{
-            max-width: 1210px;
-            width: 100%;
-            padding: 20px;
-            margin: 0 auto;
-        }
-        .btn{
-            height: 70px;
-            border-radius: 4px;
-        }
-        .btn.white{
-            background-color: #fff;
-        }
-        .navbar  .container nav{
-            width: 100%;
-        }
-        .navbar .container nav input{
-            height: 70px;;
-        }
-
-        /* Hover item start */
-        @media(min-width: 767px){
-            .item:hover{
-                background: #FFFFFF;
-                box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
-                border-radius: 4px;
-                padding: 40px;
-                margin: 0;
-            }
-            .item:hover h4{
-                color: #EF454E;
-            }
-        }
-        /* Hover item end*/
-
-        /* Responsive *//* Responsive *//* Responsive */
-        @media(max-width: 767px){
-            .item{
-                flex-direction: column;
-                padding: 20px 0;
-            }
-            .text{
-                padding: 0;
-                width: 100%;
-            }
-            .img-box,
-            .text{
-                margin-bottom: 15px;
-            }
-        }
-
-        .center{
-        position: absolute;
-        top: 80%;
-        left:50%;
-        transform: translate(-50%, -50%);
-    }
-
-    #formValidation{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .btn_trans {
-        transform: rotate(25deg);
-    }
-
-    .popup{
-        /*width: 350px;*/
-        /*height: 280px;*/
-        padding: 30px 20px;
-        background: #f5f5f5;
-        z-index: 2;
-        text-align: center;
-    }
-
-    .modal_show{
-        display: none;
-    }
-
-    .form-control-lg{
-        height: 60px;
-        width: 360px;
-        left: 7977px;
-        top: 5560px;
-        border-radius: 4px;
-    }
-</style>
+    <link rel="stylesheet" href="dist/css/Lobibox.min.css"/>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
@@ -258,16 +52,16 @@
     </div>
 </nav>
 
-<div class="navbar">
-    <div class="container">
-        <nav>
-            <button class="btn type white">Type of Student <img src="filled.svg" alt=""></button>
-            <input type="search" name="" id="" class="nav" placeholder="Search">
-            <input type="submit" value="Search">
-            <button class="btn filter white"><img src="filter.svg" alt=""> Filter By <img src="filled.svg" alt=""></button>
-        </nav>
-    </div>
-</div>
+<!--<div class="navbar">-->
+<!--    <div class="container">-->
+<!--        <nav>-->
+<!--            <button class="btn type white">Type of Student <img src="filled.svg" alt=""></button>-->
+<!--            <input type="search" name="" id="" class="nav" placeholder="Search">-->
+<!--            <input type="submit" value="Search">-->
+<!--            <button class="btn filter white"><img src="filter.svg" alt=""> Filter By <img src="filled.svg" alt=""></button>-->
+<!--        </nav>-->
+<!--    </div>-->
+<!--</div>-->
 
 <div class="container">
     <p class="count">Showing 1 to 5 of 22 results</p>
@@ -363,23 +157,23 @@
         I AM A:
     </div>
     <form method="post" name="formValidation" id="formValidation" action="">
-        <div class="profession">
+        <div class="profession required">
             <label class="radio-inline"><input type="radio" name="profession" class="form-contorl"/>Student</label>
             <label class="radio-inline"><input type="radio" name="profession" class="form-contorl"/>Parent</label>
             <label class="radio-inline"><input type="radio" name="profession" class="form-contorl"/>Counselor</label>
             <label class="radio-inline"><input type="radio" name="profession" class="form-contorl"/>Other</label>
         </div>
-        <input type = "text" class="form-control form-control-lg" name = "firstname" placeholder = "First Name"/>
+        <input type = "text" class="form-control form-control-lg required" name = "firstname" placeholder = "First Name"/>
         <br/>
-        <input type = "text" class="form-control form-control-lg" name = "lastname" placeholder = "Last Name"/>
+        <input type = "text" class="form-control form-control-lg required" name = "lastname" placeholder = "Last Name"/>
         <br/>
-        <input type = "email" class = "form-control form-control-lg" name = "email" placeholder = "Email Address"/>
+        <input type = "email" class = "form-control form-control-lg required" name = "email" placeholder = "Email Address"/>
         <br/>
-        <input type = "password" class = "form-control form-control-lg" name = "password" placeholder = "Password" id = "password"/>
+        <input type = "password" class = "form-control form-control-lg required" name = "password" placeholder = "Password" id = "password"/>
         <br/>
-        <input type = "password" class = "form-control form-control-lg" name = "confirm" placeholder = "Confirm Password"/>
+        <input type = "password" class = "form-control form-control-lg required" name = "confirm" placeholder = "Confirm Password"/>
         <br/>
-        <select class = "form-control form-control-lg" name = "school">
+        <select class = "form-control form-control-lg required" name = "school">
             <option value="0" selected="" disabled="">School</option>
             <option>High School </option>
             <option>High School </option>
@@ -387,7 +181,7 @@
             <option>High School </option>
         </select>
         <br/>
-        <select class = "form-control form-control-lg" name="currentgrade">
+        <select class = "form-control form-control-lg required" name="currentgrade">
             <option value="0" selected="" disabled="">Current Grade/Year in School</option>
             <option>High School Freshman</option>
             <option>High School Freshman</option>
@@ -395,7 +189,7 @@
             <option>High School Freshman</option>
         </select>
         <br/>
-        <input type="text" id="datepicker" class="form-control form-control-lg" placeholder="Date">
+        <input type="text" id="datepicker" class="form-control form-control-lg required" placeholder="Date">
         <br/>
         <div>
             SUBSCRIBE:
@@ -411,9 +205,6 @@
                     </label>
                 </div>
             </label>
-            <label class="checkbox-inline"><input type="checkbox" name = "hobbies">Football</label>
-            <label class="checkbox-inline"><input type="checkbox" name = "hobbies">Hockey</label>
-            <label class="checkbox-inline"><input type="checkbox" name = "hobbies">Tennis</label>
         </div>
         HOW DID YOU HEAR ABOUT US:
         <br/>
@@ -427,39 +218,16 @@
         <br/>
         <span>By clicking "Join," I agree to the <a href="#">Terms & Conditions</a></span>
         <br/>
-        <button type="submit" class="btn btn-danger form-control-lg px-5 btn_send" value="Join"></button>
+        <input type="submit" class="btn btn-danger form-control-lg px-5 btn_send" value="Join">
     </form>
 </div>
+
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js
 "></script>
-
+<script src="dist/js/Lobibox.min.js"></script>
 <script type="text/javascript" src="/js/register.js"></script>
-<script>
-    $( document ).ready(function() {
-
-        $( function() {
-            $("#datepicker").datepicker();
-        } );
-
-        $('.btn').on('click', function () {
-            $('.modal_show').css('display', 'block');
-            console.log('ok');
-        });
-
-        $('.btn_send').hover(
-            function () {
-                $(this).addClass('btn_trans');
-            },
-            function () {
-                $(this).removeClass('btn_trans');
-            }
-        );
-    });
-
-</script>
-
 </body>
 </html>

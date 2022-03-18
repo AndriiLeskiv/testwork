@@ -11,7 +11,7 @@ app.get('/', function (req, res){
 });
 
 app.post('/', function (req, res){
-    res.json({status: 'ok'});
+    res.json(req.body);
 });
 
 app.listen(3000, ()=> {
