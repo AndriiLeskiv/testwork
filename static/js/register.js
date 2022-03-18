@@ -5,15 +5,21 @@ $(() => {
 
     $('.show_form_validation').on('click', function () {
         $('.modal_show').css('display', 'block');
-        $('.container').css('opacity', '.5');
+
+    });
+
+    $('.close').on('click', function () {
+        $('.modal_show').css({'display' : ''});
     });
 
     $(document).keydown(function(e) {
         if (e.keyCode === 27) {
             e.stopPropagation();
-            $('.modal_show, .container').css({'display' : '', 'opacity' : '' });
+            $('.modal_show, body').css({'display' : '', 'opacity' : '' });
         }
     });
+
+
 
     $('.btn_send').hover(
         function () {
