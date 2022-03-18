@@ -3,8 +3,16 @@ $(() => {
         $("#datepicker").datepicker();
     } );
 
-    $('.btn').on('click', function () {
+    $('.show_form_validation').on('click', function () {
         $('.modal_show').css('display', 'block');
+        $('.container').css('opacity', '.5');
+    });
+
+    $(document).keydown(function(e) {
+        if (e.keyCode === 27) {
+            e.stopPropagation();
+            $('.modal_show, .container').css({'display' : '', 'opacity' : '' });
+        }
     });
 
     $('.btn_send').hover(
