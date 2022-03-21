@@ -5,7 +5,6 @@ $(() => {
 
     $('.show_form_validation').on('click', function () {
         $('.modal_show').css('display', 'block');
-
     });
 
     $('.close').on('click', function () {
@@ -69,7 +68,7 @@ $(() => {
             currentgrade: {
                 required: true
             },
-            country: {
+            online_search: {
                 required: true
             }
         },
@@ -93,27 +92,29 @@ $(() => {
                 required: 'Please enter confirm password!',
                 equalTo: 'Please enter same password!'
             },
+            online_search: {
+                required: true
+            }
             },
 
-        submitHandler: function (form){
-        $.ajax({
-            url: '/',
-            method: 'post',
-            dataType: 'html',
-            data: $("#formValidation").serialize(),
-            success: function(data){
-                alert(data);
-                console.log(data);
-                $(".modal_show").hide();
-
-                // if (data.status === "ok") {
-                //     let type = 'success';
-                //     Lobibox.notify(type, {
-                //         msg: "Усі дані успішно збережені"
-                //     });
-                // }
-            }
-        });
+        submitHandler: function (form) {
+            $.ajax({
+                url: 'create.php',
+                method: 'post',
+                dataType: 'html',
+                data: $("#formValidation").serialize(),
+                success: function (data) {
+                    alert(data);
+                    console.log(data);
+                    $(".modal_show").hide();
+                    // if (data.status === "ok") {
+                    //     let type = 'success';
+                    //     Lobibox.notify(type, {
+                    //         msg: "Усі дані успішно збережені"
+                    //     });
+                    // }
+                }
+            });
         }
     });
 });
